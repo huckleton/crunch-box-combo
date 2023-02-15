@@ -25,5 +25,5 @@ PERMS_OWNER_ONLY = {
 
 CRUNCHY_RED = 0xE3265A
 CRUNCHY_BLUE = 0x28A9AB
-INVITE_LINK = r"https://discord.com/api/oauth2/authorize?client_id=820865262526005258&permissions=4294307568&scope=applications.commands%20bot"
+INVITE_LINK = r"https://discord.com/api/oauth2/authorize?client_id=1074960322483458078&permissions=412317191168&scope=bot"
 OSSUARY_LINK = "localhost:5000"

@@ -150,8 +150,7 @@ class Automata(commands.Cog):
                 await channel.send("what")
 
     def cog_unload(self):
-        with open('db/rolestore.pickle', 'wb') as f:
-            pickle.dump(self.data, f, protocol=pickle.HIGHEST_PROTOCOL)
+        print("Mos Thoser")
 
 
 def setup(bot: commands.Bot):

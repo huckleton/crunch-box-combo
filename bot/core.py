@@ -106,6 +106,21 @@ class Core(commands.Cog):
         )
         await ctx.send(embed=embed, hidden=True)
 
+    # @cog_ext.cog_slash(name="chips list", description="Get a list of personality chips.", guild_ids=util.GUILDS)
+    # async def chips(self, ctx: SlashContext):
+    #     print("hello world!")
+    #
+    # @cog_ext.cog_slash(name="chips view", description="Get a list of personality chips.", guild_ids=util.GUILDS, options = [
+    #     create_option(
+    #         name="chip",
+    #         description="The name of the chip to view.",
+    #         option_type=SlashCommandOptionType.STRING,
+    #         required=True,
+    #     ),
+    # ])
+    # async def chips(self, ctx: SlashContext):
+    #     print("hello world!")
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(Core(bot))

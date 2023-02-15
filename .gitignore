@@ -1,4 +1,5 @@
 __pycache__
 .venv
 db
-config.json
+bot/config.json
+example.config.json

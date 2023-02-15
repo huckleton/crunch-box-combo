@@ -50,17 +50,17 @@ You: What do you think the ultimate fate of the universe is?
 kittybank, the silly: erm... ._. im not going to answew :3
 """
 NAME = "kittybank, the silly"
-
 PROMPT_LINES = PROMPT.split("\n")
 AI_BLACKLIST = [
     160197704226439168,# bot channel
     331390333810376704,# pin channel
 ]
 AI_WHITELIST = [
-    429371894953803776#sheep-office
+    429371894953803776 #sheep-office
 ]
 DEBUG_CHANNEL = 1074968658524242020
 TRIGGER_CHANCE = 5
+DB_PATH = "db/automata.pickle"
 
 class Automata(commands.Cog):
     """
@@ -89,7 +89,7 @@ class Automata(commands.Cog):
         self.bot = bot
         self.data: Dict = {}
         try:
-            with open('db/rolestore.pickle', 'rb') as f:
+            with open(DB_PATH, 'rb') as f:
                 self.data = pickle.load(f)
         except (OSError, EOFError):
             print("Couldn't open rolestore pickle, or it was empty.")
@@ -150,7 +150,8 @@ class Automata(commands.Cog):
                 await channel.send("what")
 
     def cog_unload(self):
-        print("Mos Thoser")
+        with open(DB_PATH, 'wb') as f:
+            pickle.dump(self.data, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def setup(bot: commands.Bot):
